@@ -1,0 +1,104 @@
+*{
+    font-family: helvetica , sans-serif , serif;
+}
+body{
+    background-image: url(images/downloaded/contact.jpg);
+    background-size: cover;
+    background-position: bottom right;
+    margin: 0;
+}
+
+.nav-container{
+    text-align: center;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+.logo-cover{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-cover span{
+    font-family: 'Berkshire Swash';
+    color: rgb(218, 175, 68);
+    font-size: larger;
+    margin-left: 1rem;
+}
+
+.logo-container{
+    border-radius: 50%;
+    padding: 0.3rem;
+}
+.logo-container:hover{
+    box-shadow: 0px 0px 15px rgb(218, 175, 68);
+    transition: box-shadow ease-in-out 0.5s;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li{
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin: 0px 2px;
+    border-bottom: 1.5px solid transparent;
+    color: #eeeeee;
+    font-weight: lighter;
+}
+.fa-home , .fa-camera-retro , .fa-address-book , .fa-quote-left, .fa-quote-right  {
+    color: rgb(218, 175, 68);
+}
+nav ul li:hover {
+    border-bottom: 1.5px solid rgb(218, 175, 68);
+    transition: border-bottom  1s ease-in-out ;
+}
+nav ul a{
+    text-decoration: none;
+}
+/* End of Nav Styles */
+.main-wrapper{
+    /* margin: auto; */
+    width: 40vw;
+    padding: 1rem;
+}
+
+input[type=text],input[type=email],textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+.main-wrapper .form-container{
+    padding: 20px;
+    border-radius: 7px;
+    background-color: #18141494;
+    color: #eeeeee;
+}
+
+footer{
+    font-size: 1.5rem;
+    color: #f2f2f2;
+    padding: 0.5rem;
+}
+.fa-instagram{
+    color: #eb53ac;
+}
+.fa-twitter{
+    color: rgb(120, 166, 252);
+}
+
+#submit-form{
+    height: 2rem;
+    width: 4rem;
+    box-shadow: 0.3rem 0.3rem rgb(0, 0, 0);
+}

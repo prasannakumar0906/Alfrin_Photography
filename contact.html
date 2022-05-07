@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfrin Photography</title>
+    <link rel="shortcut icon" href="images/logo/icon1.png" type="image/x-icon">
+    <link rel="stylesheet" href="contact_styles.css">
+    <script src="https://kit.fontawesome.com/a957d26908.js" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body >
+    
+    <div class="nav-container">
+    
+        <nav>
+            <ul>
+                <div class="logo-cover">
+                <a href="index.html"><div class="logo-container">
+                    <img src="images/logo/icon1.png" alt="Alfrin Photography" width="48px" height="auto">
+                    
+                </div></a>
+                <span>Alfrin Photography</span></div>
+                
+                <a href="index.html"><li><i class="fas fa-home"></i> Home</li></a>
+                <a href="portfolio.html"><li><i class="fas fa-camera-retro"></i> Portfolio</li></a>
+                <a href="contact.html"><li><i class="far fa-address-book"></i> Contact</li></a>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-wrapper">
+        <h1 style="text-align: center ;color: #f2f2f2;">Get in touch with us</h1>
+       <div class="form-container">
+                <form id="g-form" method="POST" action="https://script.google.com/macros/s/AKfycbydUcHTpjhevWHLkS6ccdHi9NF0-bPz5xeWq2PO_w/exec">
+                    <label for="fname">First Name</label>
+                    <input id="fname" name="name" placeholder="Your First Name.." type="text">
+                    <label for="lname">Last Name</label>
+                    <input id="lname" type="text" name="name" placeholder="Your Last Name..">
+                    <label for="email">Email</label>
+                    <input name="email" id="email" type="email" placeholder="Your Email..">
+                    <label for="msg">Your Message</label>
+                    <textarea name="message" id="msg"  rows="6" placeholder="Write to us.."></textarea>                     
+                    <input type="submit" id="submit-form"  value="Send">              
+                </form>
+        </div> 
+    </div>
+    <footer>Also follow us at : <i class="fa fa-instagram"></i> <i class="fa fa-twitter"></i> <i class="fa fa-facebook"></i></footer>
+
+    <script>
+        $("#g-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbxQC4sZ3Gm3Yr-qdl38f7LYkRam_8oGpVob-qzd/exec",
+                data:$("#g-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>
